@@ -1,6 +1,6 @@
 # Chinese Word2Vec Training and Testing
 
-This project provides tools for training and testing Chinese Word2Vec models using Gensim and Jieba. It includes scripts for training the model and testing semantic relationships in the trained model.
+This project provides tools for training and testing Chinese Word2Vec models from JSON file using Gensim and Jieba. It includes scripts for training the model and testing semantic relationships in the trained model.
 
 ## Project Structure
 
@@ -30,8 +30,21 @@ pip install gensim jieba numpy
 ```
 
 ## Usage
+### 1. Pre-treatment of corpus
 
-### 1. Training the Word2Vec Model
+The `json_to_txt.py` convert the json file into txt corpus. 
+
+```bash
+python json_to_txt.py
+```
+
+The `segment.py` segments original corpus into segmented corpus for further training using Jieba.
+
+```bash
+python segment.py
+```
+
+### 2. Training the Word2Vec Model
 
 The `train_word2vec.py` or `train2_word2vec.py` script trains a Chinese Word2Vec model with several parameters:
 
@@ -48,7 +61,7 @@ The script `train2_word2vec.py` uses the following optimized parameters:
 - 15 training epochs
 - Automatic CPU core utilization
 
-### 2. Testing Semantic Relationships
+### 2\3. Testing Semantic Relationships
 
 The `test_word2vec.py` script tests various semantic relationships in the trained model:
 
