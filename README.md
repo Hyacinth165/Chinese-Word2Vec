@@ -61,7 +61,7 @@ The script `train2_word2vec.py` uses the following optimized parameters:
 - 15 training epochs
 - Automatic CPU core utilization
 
-### 2\3. Testing Semantic Relationships
+### 3. Testing Semantic Relationships
 
 The `test_word2vec.py` script tests various semantic relationships in the trained model:
 
